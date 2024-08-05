@@ -15,12 +15,6 @@ wss.on("connection", function (socket){
     gameManger.removeUser(socket);
   })
   
-  socket.send("message received");
-  socket.on("message", function(data){
-    console.log(`received the message from client side ${data}`);
-    socket.send(`I'm sending the same data from the server side ${data}`);
-  })
-
 })
 
 server.listen(8080, () => {
